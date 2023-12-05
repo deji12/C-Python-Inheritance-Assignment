@@ -2,7 +2,15 @@
 
 This API is built in django and is currently hosted on AWS provides basic endpoints that perform the following:
 
+### See base url for endpoints and more info below:
+
+- base url: 
+    ```
+    http://34.235.143.237:8000/
+    ```
+
 ### Authentication
+
 
 1. Signup endpoint:
     - url: 

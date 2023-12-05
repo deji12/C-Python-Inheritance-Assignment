@@ -74,3 +74,28 @@ def logout(request):
     request.user.auth_token.delete()
 
     return Response({"message": "logout was successful"})
+
+@api_view(["GET"])
+def landing(request):
+
+    endpoints = {
+        "signup": "http://34.235.143.237:8000/signup/",
+        "login": "http://34.235.143.237:8000/login/",
+        "logout": "http://34.235.143.237:8000/logout/",
+        "creating a course": "http://34.235.143.237:8000/course/create-course/",
+        "deleting a course": "http://34.235.143.237:8000/course/delete-course/<int:course_id>/",
+        "updating a course": "http://34.235.143.237:8000/course/delete-course/",
+        "retrieving all courses": " http://34.235.143.237:8000/course/get-all-courses/",
+        "": "",
+    }
+
+    message = {
+        "Message": "you made it this far, try subscribing to my youtube channel. I teach programming: https://www.youtube.com/@the_proton_guy"
+    }
+
+    final_display_data = {
+        "endpoints": endpoints,
+        "message": message
+    }
+
+    return Response(final_display_data)
